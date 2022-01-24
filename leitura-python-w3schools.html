@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Leitura Python W3Schools</title>
+	<style type="text/css">
+		body {
+			background: #232526;
+			color: #ACE8BA;
+			width: 35%;
+			margin: auto;
+			text-align: justify;
+			font-size: 18px;
+			font-family: 'Roboto', sans-serif;
+			opacity: 0.8;
+		}
+	    h1,h2,h3,h3,h5 {
+	    	text-align: left;
+	    }
+
+	    a {
+	    	text-shadow: 1px 1px white;
+	    }
+
+		main {
+			border: solid;
+			padding: 12px;
+		}
+
+		strong {
+			color: white;
+			font-family: 'Courier', monospace;
+		}
+
+		div.exemplo {
+			overflow: auto;
+			padding: 1px 0px 20px 20px;
+			background-color: #8c8c8c;
+			border-left: solid greenyellow;
+			margin-bottom: 7px;
+			margin-top: 7px;
+		}
+
+		.exemplo h3 {
+			color: greenyellow;
+			text-shadow: 1px 1px black;
+		}
+
+		div.exemplo-2 {
+			overflow: auto;
+			padding: 1px 0px 20px 20px;
+			background-color: #FFFFFF;
+			border-left: solid greenyellow;
+			margin-bottom: 7px;
+			margin-top: 7px;
+		}
+
+		.exemplo-2 h3 {
+			color: black;
+			text-shadow: 1px 1px white;
+		}
+
+		div.exemplo-3 {
+			overflow: auto;
+			padding: 1px 0px 20px 20px;
+			background-color: #FF0000;
+			border-left: solid greenyellow;
+			margin-bottom: 7px;
+			margin-top: 7px;
+		}
+
+		.exemplo-3 h3 {
+			color: #ffffff;
+			text-shadow: 0.5px 0.5px black;
+		}
+
+		.d-code {
+			background-color: black;
+			color: white;
+			border-left: solid greenyellow;
+			padding: 3px;
+			font-family: 'Courier', monospace;
+			text-align: left;
+			margin-right: 7px;
+			margin-left: -10px;
+		}
+
+		.sintaxe-py, .variaveis-py{
+			background-color: #000000;
+			padding: 7px;
+		}
+
+		@supports (display: flex) {
+		  @media screen and (max-width: 680px) {
+		    body {
+		      width: 90%;
+		    }
+		  }
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div style="display: none;">
+		</div>
+		<section id="introducao" class="introducao-py">
+			<h1>Introdução ao Python</h1>
+			<h2>O que é Python?</h2>
+			<p>Python é uma linguagem de programação popular. Foi criado por <em>Guido van Rossum</em> e lançado em 1991.</p>
+
+			<p>É usado para:
+			<li>desenvolvimento web (lado do servidor),</li>
+			<li>desenvolvimento de software,</li>
+			<li>matemática,</li>
+			<li>script do sistema.</li>
+
+			<h2>O que o Python pode fazer?</h2>
+			<li>Python pode ser usado em um <strong>servidor</strong> para <strong>criar aplicativos da web</strong>.</li>
+			<li>O Python pode ser usado junto com o <strong>software</strong> para <strong>criar fluxos de trabalho</strong>.</li>
+			<li>Python pode se <strong>conectar a sistemas de banco de dados</strong>. Ele também pode <strong>ler</strong> e <strong>modificar arquivos</strong>.</li>
+			<li>Python pode ser usado para lidar com big data e <strong>realizar matemática complexa</strong>.</li>
+			<li>Python pode ser usado para </strong>prototipagem rápida<strong> ou para </strong>desenvolvimento de software</strong> pronto para produção.</li>
+
+			<h2>Por que Python?</h2>
+			<li>Python funciona em diferentes plataformas (Windows, Mac, Linux, Raspberry Pi, etc).
+			<li>Python tem uma sintaxe simples semelhante ao idioma inglês.</li>
+			<li>Python tem sintaxe que permite aos desenvolvedores escrever programas com menos linhas do que algumas outras linguagens de programação.</li>
+			<li>Python é executado em um sistema interpretador, o que significa que o código pode ser executado assim que for escrito. Isso significa que a prototipagem pode ser muito rápida.
+			<li>Python pode ser tratado de forma procedural, orientada a objetos ou funcional.</li>
+
+			<h2>Bom saber</h2>
+			<li>A versão principal mais recente do Python é o Python 3, que usaremos neste tutorial. No entanto, o Python 2, embora não seja atualizado com nada além de atualizações de segurança, ainda é bastante popular.</li>
+			<li>Neste tutorial Python será escrito em um editor de texto. É possível escrever Python em um ambiente de desenvolvimento integrado, como Thonny, Pycharm, Netbeans ou Eclipse, que são particularmente úteis ao gerenciar coleções maiores de arquivos Python.</li>
+
+			<h2>Sintaxe do Python em comparação com outras linguagens de programação</h2>
+			<li>O Python foi projetado para facilitar a leitura e possui algumas semelhanças com o idioma inglês com influência da matemática.</li>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				print("Hello, World!")
+			</code>	
+			</div>
+			</div>
+
+			<li>Python usa novas linhas para completar um comando, ao contrário de outras linguagens de programação que geralmente usam ponto e vírgula ou parênteses.</li>
+			<li>Python depende de recuo, usando espaço em branco, para definir o escopo; como o escopo de loops, funções e classes. Outras linguagens de programação costumam usar colchetes para essa finalidade.</li>
+
+			<h2>Instalação do Python</h2>
+			<p>Muitos PCs e Macs terão o python já instalado.</p>
+
+			<p>Para verificar se você tem o python instalado em um PC com Windows, pesquise na barra inicial por Python ou execute o seguinte na linha de comando (cmd.exe):</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python --version
+			</code>	
+			</div>
+			</div>
+
+			<p>Para verificar se você tem o python instalado em um Linux ou Mac, então no linux abra a linha de comando ou no Mac abra o Terminal e digite:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				python --version
+			</code>	
+			</div>
+			</div>
+
+			<p>Se você achar que não tem o Python instalado em seu computador, você pode baixá-lo gratuitamente no seguinte <a href="https://www.python.org/">site</a></p>
+
+			<h2>Guia de início rápido do Python</h2>
+			<p>Python é uma <strong>linguagem de programação interpretada</strong>, isso significa que, como desenvolvedor, você escreve arquivos Python (.py) em um editor de texto e depois coloca esses arquivos no interpretador python para serem executados.</p>
+
+			<p>A maneira de executar um arquivo python é assim na linha de comando:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python helloworld.py
+			</code>	
+			</div>
+			</div>
+
+			<p>Onde "helloworld.py" é o nome do seu arquivo python.</p>
+
+			<p>Vamos escrever nosso primeiro arquivo Python, chamado helloworld.py, que pode ser feito em qualquer editor de texto.</p>
+
+			<div class="exemplo-2">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				print("Hello, World!")
+			</code>	
+			</div>
+			</div>
+
+			<p>Simples assim. Salve seu arquivo. Abra sua linha de comando, navegue até o diretório onde você salvou seu arquivo e execute:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python helloworld.py
+			</code>	
+			</div>
+			</div>
+
+			<p>A saída deve ser:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				Hello, World!
+			</code>	
+			</div>
+			</div>
+
+			<p>Parabéns, você esreveu e executou seu primeiro programa em Python.</p>
+
+			<h2>A linha de comando do Python</h2>
+			<p>Para testar uma pequena quantidade de código em python, às vezes é mais rápido e fácil não escrever o código em um arquivo. Isso é possível porque o Python pode ser executado como uma linha de comando.</p>
+
+			<p>Digite o seguinte na linha de comando do Windows, Mac ou Linux:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python
+			</code>	
+			</div>
+			</div>
+
+			<p>Ou, se o comando "python" não funcionou, você pode tentar "py":</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>py
+			</code>	
+			</div>
+			</div>
+
+			<p>A partir daí, você pode escrever qualquer python, incluindo nosso exemplo hello world do início do tutorial:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python<br><br>
+				Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32<br><br>
+				Type "help", "copyright", "credits" or "license" for more information.<br><br>
+				>>> print("Hello, World!")<br>
+			</code>	
+			</div>
+			</div>
+
+			<p>Que escreverá "Hello, World!" na linha de comando:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				C:\Users\Your Name>python<br><br>
+				Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32<br><br>
+				Type "help", "copyright", "credits" or "license" for more information.<br><br>
+				>>> print("Hello, World!")<br><br>
+				Hello, World!<br>
+			</code>	
+			</div>
+			</div>
+
+			<p>Sempre que você terminar na linha de comando do python, você pode simplesmente digitar o seguinte para sair da interface da linha de comando do python:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+				exit()
+			</code>	
+			</div>
+			</div>
+		</section>
+
+		<section id="sintaxe" class="sintaxe-py">
+			<h2>Executar sintaxe do Python</h2>	
+			<p>Como aprendemos na página anterior, a sintaxe do Python pode ser executada escrevendo diretamente na linha de comando:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+			>>> print("Hello, World!")<br>			
+			Hello, World!
+			</code>
+			</div>
+			</div>
+
+			<p>Ou criando um arquivo python no servidor, usando a extensão de arquivo .py e executando-o na linha de comando:</p>
+
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>	
+			C:\Users\Your Name>python myfile.py
+			</code>
+			</div>
+			</div>
+
+			<h2>Recuo Python</h2>
+			<p>O recuo refere-se aos espaços no início de uma linha de código.</p>
+
+			<p>Onde em outras linguagens de programação o recuo no código é apenas para legibilidade, o recuo em Python é muito importante.</p>
+
+			<p>Python usa recuo para indicar um bloco de código.</p>
+
+			<div class="exemplo-2">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+			if 5 > 2:<br>
+  			&nbsp;&nbsp;print("Five is greater than two!")	
+			</code>	
+			</div>
+			</div>
+
+			<p>Python lhe dará um erro se você pular o recuo:</p>
+
+			<div class="exemplo-3">
+				<h3>exemplo<br>erro de sintaxe:</h3>
+			<div class="d-code">
+			<code>
+			if 5 > 2:<br>
+			print("Five is greater than two!")	
+			</code>	
+			</div>
+			</div>
+
+			<p>O número de espaços depende de você como programador, mas tem que ser pelo menos um.</p>
+
+			<div class="exemplo-2">
+				<h3>exemplo</h3>
+			<div class="d-code">
+			<code>
+			if 5 > 2:<br>
+			 &nbsp;print("Five is greater than two!") <br>
+			if 5 > 2:<br>
+			&nbsp;&nbsp;&nbsp;print("Five is greater than two!")<br>
+			</code>
+			</div>	
+			</div>
+
+			<p>Você precisa usar o mesmo número de espaços no mesmo bloco de código, caso contrário, o Python fornecerá um erro:</p>
+
+			<div class="exemplo-3">
+				<h3>exemplo<br>erro de sintaxe</h3>
+			<div class="d-code">
+			<code>
+			if 5 > 2:<br>
+			&nbsp;print("Five is greater than two!")<br>
+			&nbsp;&nbsp;&nbsp;print("Five is greater than two!")<br>
+			</code>	
+			</div>
+			</div>
+
+			<h2>Variáveis Python</h2>
+			<p>Em Python, as variáveis são criadas quando você atribui um valor a ela:</p>
+
+			<div class="exemplo">
+				<h3>exemplo<br>variáveis em python</h3>
+			<div class="d-code">	
+			<code>
+			x = 5<br>
+			y = "Hello, World!"	
+			</code>
+			</div>
+			</div>	
+
+			<p>Python não tem comando para declarar uma variável.</p>
+
+			<p>Você aprenderá mais sobre variáveis no capítulo Variáveis do Python.</p>
+
+			<h2>Comentários</h2>
+			<p>O Python tem capacidade de comentários para fins de documentação no código.</p>
+
+			<p>Os comentários começam com um # e o Python renderizará o restante da linha como um comentário:</p>
+
+			<div class="exemplo">
+				<h3>exemplo<br>comentários em python</h3>
+			<div class="d-code">	
+			<code>
+			#This is a comment.<br>
+			print("Hello, World!")
+			</code>
+			</div>
+			</div>	
+		</section>
+
+		<section id="comentarios" class="comentarios-py">
+			<h1>Python <span class="color_h1">Comments</span></h1>
+			<p>Os comentários podem ser usados para explicar o código Python.</p>
+			<p>Os comentários podem ser usados para tornar o código mais legível.</p>
+			<p>Os comentários podem ser usados para impedir a execução ao testar o código.</p>
+			<h2>Criando um comentário</h2>
+			<p>Os comentários começam com um <code>#</code> e o Python
+			ignore-os:</p>
+
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			#Este é um comentário<br>
+			print("Olá, mundo!")
+			</div>
+			</div>
+
+			<p>Os comentários podem ser colocados no final de uma linha, e o Python ignorará o resto
+			da linha:</p>
+
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			print("Olá, Mundo!") #Este é um comentário
+			</div>
+			</div>
+
+			<p>Um comentário não precisa ser um texto que explique o código, ele também pode ser usado para
+			impedir que o Python execute código:</p>
+
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			  #print(&quot;Olá, Mundo!&quot;)<br>print(&quot;Saúde, companheiro!&quot;)</div>
+			</div>
+
+			<h2>Comentários de várias linhas</h2>
+
+			<p>O Python não tem realmente uma sintaxe para comentários de várias linhas.</p>
+			<p>Para adicionar um comentário de várias linhas, você pode inserir um <code>#</code> para cada linha:</p>
+
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			  #Este é um comentário<br>#escrito em<br>#mais do que apenas uma linha<br>print(&quot;Olá,
+			  Mundo!")
+			</div>
+			</div>
+
+			<p>Ou, não exatamente como pretendido, você pode usar uma string de várias linhas.</p>
+			<p>Como o Python ignora literais de string que não são atribuídos a uma variável, você pode adicionar uma string de várias linhas (aspas triplas) em seu código e colocar seu comentário dentro dela:</p>
+
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			  &quot;&quot;&quot;<br>Este é um comentário<br>escrito em <br>mais do que apenas
+			  uma linha<br>&quot;&quot;&quot;<br>print(&quot;Hello, World!&quot;)</div>
+			</div>
+
+			<p>Desde que a string não seja atribuída a uma variável, o Python lerá o código, mas o ignorará e você fez um comentário de várias linhas.</p>
+		</section>
+
+		<section id="variaveis" class="variaveis-py">
+			
+		<h1>Python <span class="color_h1">Variáveis</span></h1>
+
+		<h2>Variáveis</h2>
+		<p>Variáveis são contêineres para armazenar valores de dados.</p>
+		<h2>Criando variáveis</h2>
+		<p>Python não tem comando para declarar uma variável.</p>
+
+		<p>Uma variável é criada no momento em que você atribui um valor a ela.</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo</h3>
+		<div class="d-code">
+		x = 5<br>
+		y = "João"<br>
+		print(x)<br>
+		print(s)
+		</div>
+		</div>
+
+		<p>As variáveis não precisam ser declaradas com nenhum <em>tipo</em> específico e podem até mudar de tipo depois de definidas.</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo</h3>
+		<div class="d-code">
+		x = 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # x é do tipo int<br>
+		x = "Sally" # x agora é do tipo str<br>
+		print(x)
+		</div>
+		</div>
+
+		<h2>Fundição</h2>
+
+		<p>Se você deseja especificar o tipo de dados de uma variável, isso pode ser feito com conversão.</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo</h3>
+		<div class="d-code">
+		x =
+		  str(3)&nbsp;&nbsp;&nbsp; # x será '3'<br>y = int(3)&nbsp;&nbsp;&nbsp; # y
+		  será 3<br>z = float(3)&nbsp; # z será 3.0</div>
+		</div>
+
+		<h2>Obter o tipo</h2>
+
+		<p>Você pode obter o tipo de dados de uma variável com a função <code class="w3-codespan">type()</code>.</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo</h3>
+		<div class="d-code">
+		  x = 5<br>y = "João"<br>print(type(x))<br>print(type(y))</div>
+		</div>
+
+		<div class="w3-note w3-panel">Você aprenderá mais sobre
+		  <a href="python_datatypes.asp">tipos de dados</a> e
+		  <a href="python_casting.asp">transmissão</a> posteriormente neste tutorial.</div>
+
+		<h2>Aspas simples ou duplas?</h2>
+
+		<p>Variáveis de string podem ser declaradas usando aspas simples ou duplas:</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo</h3>
+		<div class="d-code">
+		x = "João"<br># é o mesmo que<br>x =
+		  'John'
+		</div>
+		</div>
+
+		<h2>Diferencia maiúsculas de minúsculas</h2>
+
+		<p>Os nomes de variáveis diferenciam maiúsculas de minúsculas.</p>
+
+		<div class="exemplo-2">
+		<h3>Exemplo<br>Isso criará duas variáveis:</h3>
+		<div class="d-code">
+		  a = 4<br>A =
+		  &quot;Sally&quot;<br># A não substituirá um</div>
+		</div>
+		</section>
+	</main>
+</body>
+		<!--
+			<div class="exemplo">
+				<h3>exemplo</h3>
+			<div class="d-code">	
+			<code>
+			
+			</code>
+			</div>
+			</div>
+		-->
+</html>
