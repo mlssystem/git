@@ -32,6 +32,9 @@
 ### Criar diretório Git
 	mkdir nome_projeto
 
+### Criar arquivo
+	touch nome_arquivo
+
 ### Inicialize Git
 	git init
 
