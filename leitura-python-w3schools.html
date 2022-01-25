@@ -19,6 +19,37 @@
 	    	text-align: left;
 	    }
 
+	    table {
+	    	width: 100%;
+	    	text-align: center;
+	    	border-collapse: collapse;
+	    	border-radius: 1px;
+	    }
+
+	    table, td {
+	    	border: 0.5px solid;
+	    	padding: 5px;
+	    }
+
+	    th {
+	    	color: white;
+	    	text-shadow: 0.5px 0.5px black;
+	    }
+
+		tr:nth-child(even) {
+		    background: linear-gradient(#8c8c8c, black); 
+		    opacity: 0.8 black; 
+		    color:white; 
+		    text-shadow: 1px 1px black; 
+		}
+
+		tr:nth-child(odd) {
+		    background: linear-gradient(black, #8c8c8c); 
+		    opacity: 0.8 black; 
+		    color:white; 
+		    text-shadow: 1px 1px black;	
+		}
+
 	    a {
 	    	text-shadow: 1px 1px white;
 	    }
@@ -300,10 +331,8 @@
 			<div class="exemplo">
 				<h3>exemplo</h3>
 			<div class="d-code">
-			<code>
 			>>> print("Hello, World!")<br>			
 			Hello, World!
-			</code>
 			</div>
 			</div>
 
@@ -312,9 +341,7 @@
 			<div class="exemplo">
 				<h3>exemplo</h3>
 			<div class="d-code">
-			<code>	
 			C:\Users\Your Name>python myfile.py
-			</code>
 			</div>
 			</div>
 
@@ -328,10 +355,8 @@
 			<div class="exemplo-2">
 				<h3>exemplo</h3>
 			<div class="d-code">
-			<code>
 			if 5 > 2:<br>
   			&nbsp;&nbsp;print("Five is greater than two!")	
-			</code>	
 			</div>
 			</div>
 
@@ -340,10 +365,8 @@
 			<div class="exemplo-3">
 				<h3>exemplo<br>erro de sintaxe:</h3>
 			<div class="d-code">
-			<code>
 			if 5 > 2:<br>
 			print("Five is greater than two!")	
-			</code>	
 			</div>
 			</div>
 
@@ -352,12 +375,10 @@
 			<div class="exemplo-2">
 				<h3>exemplo</h3>
 			<div class="d-code">
-			<code>
 			if 5 > 2:<br>
 			 &nbsp;print("Five is greater than two!") <br>
 			if 5 > 2:<br>
 			&nbsp;&nbsp;&nbsp;print("Five is greater than two!")<br>
-			</code>
 			</div>	
 			</div>
 
@@ -366,11 +387,9 @@
 			<div class="exemplo-3">
 				<h3>exemplo<br>erro de sintaxe</h3>
 			<div class="d-code">
-			<code>
 			if 5 > 2:<br>
 			&nbsp;print("Five is greater than two!")<br>
 			&nbsp;&nbsp;&nbsp;print("Five is greater than two!")<br>
-			</code>	
 			</div>
 			</div>
 
@@ -380,10 +399,8 @@
 			<div class="exemplo">
 				<h3>exemplo<br>variáveis em python</h3>
 			<div class="d-code">	
-			<code>
 			x = 5<br>
 			y = "Hello, World!"	
-			</code>
 			</div>
 			</div>	
 
@@ -399,10 +416,8 @@
 			<div class="exemplo">
 				<h3>exemplo<br>comentários em python</h3>
 			<div class="d-code">	
-			<code>
 			#This is a comment.<br>
 			print("Hello, World!")
-			</code>
 			</div>
 			</div>	
 		</section>
@@ -469,86 +484,160 @@
 			<p>Desde que a string não seja atribuída a uma variável, o Python lerá o código, mas o ignorará e você fez um comentário de várias linhas.</p>
 		</section>
 
-		<section id="variaveis" class="variaveis-py">
-			
-		<h1>Python <span class="color_h1">Variáveis</span></h1>
+		<section id="variaveis" class="variaveis-py">>type()</code>.</p>
 
-		<h2>Variáveis</h2>
-		<p>Variáveis são contêineres para armazenar valores de dados.</p>
-		<h2>Criando variáveis</h2>
-		<p>Python não tem comando para declarar uma variável.</p>
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			  x = 5<br>y = "João"<br>print(type(x))<br>print(type(y))</div>
+			</div>
 
-		<p>Uma variável é criada no momento em que você atribui um valor a ela.</p>
+			<div class="w3-note w3-panel">Você aprenderá mais sobre
+			  <a href="python_datatypes.asp">tipos de dados</a> e
+			  <a href="python_casting.asp">transmissão</a> posteriormente neste tutorial.</div>
 
-		<div class="exemplo-2">
-		<h3>Exemplo</h3>
-		<div class="d-code">
-		x = 5<br>
-		y = "João"<br>
-		print(x)<br>
-		print(s)
-		</div>
-		</div>
+			<h2>Aspas simples ou duplas?</h2>
 
-		<p>As variáveis não precisam ser declaradas com nenhum <em>tipo</em> específico e podem até mudar de tipo depois de definidas.</p>
+			<p>Variáveis de string podem ser declaradas usando aspas simples ou duplas:</p>
 
-		<div class="exemplo-2">
-		<h3>Exemplo</h3>
-		<div class="d-code">
-		x = 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # x é do tipo int<br>
-		x = "Sally" # x agora é do tipo str<br>
-		print(x)
-		</div>
-		</div>
+			<div class="exemplo-2">
+			<h3>Exemplo</h3>
+			<div class="d-code">
+			x = "João"<br># é o mesmo que<br>x =
+			  'John'
+			</div>
+			</div>
 
-		<h2>Fundição</h2>
+			<h2>Diferencia maiúsculas de minúsculas</h2>
 
-		<p>Se você deseja especificar o tipo de dados de uma variável, isso pode ser feito com conversão.</p>
+			<p>Os nomes de variáveis diferenciam maiúsculas de minúsculas.</p>
 
-		<div class="exemplo-2">
-		<h3>Exemplo</h3>
-		<div class="d-code">
-		x =
-		  str(3)&nbsp;&nbsp;&nbsp; # x será '3'<br>y = int(3)&nbsp;&nbsp;&nbsp; # y
-		  será 3<br>z = float(3)&nbsp; # z será 3.0</div>
-		</div>
+			<div class="exemplo-2">
+			<h3>Exemplo<br>Isso criará duas variáveis:</h3>
+			<div class="d-code">
+			  a = 4<br>A =
+			  &quot;Sally&quot;<br># A não substituirá um</div>
+			</div>
+		</section>
 
-		<h2>Obter o tipo</h2>
+		<section>
+			<h1>Python <span class="color_h1">Tipos de dados</span></h1>
+			<h2>Tipos de dados integrados</h2>
+			<p>Na programação, o tipo de dados é um conceito importante.</p>
+			<p>Variáveis podem armazenar dados de diferentes tipos, e diferentes tipos podem fazer
+			coisas diferentes.</p>
+			<p>O Python tem os seguintes tipos de dados integrados por padrão, nestas categorias:</p>
+			<table class="w3-table">
+			  <tr>
+			    <th style="width:160px;">Tipo de texto:</th>
+			    <th><code>str</code></th>
+			  </tr>
+			  <tr>
+			    <td>Tipos Numéricos:</td>
+			    <td><code>int</code>, <code>float</code>,
+			    <code>complexo</code></td>
+			  </tr>
+			  <tr>
+			    <td>Tipos de sequência:</td>
+			    <td><code>lista</code>, <code>tupla</code>,
+			    <code>intervalo</code></td>
+			  </tr>
+			  <tr>
+			    <td>Tipo de mapeamento:</td>
+			    <td><code>dict</code></td>
+			  </tr>
+			  <tr>
+			    <td>Tipos de conjunto:</td>
+			    <td><code>conjunto</code>, <code>congelado</code></td>
+			  </tr>
+			  <tr>
+			    <td>Tipo booleano:</td>
+			    <td><code>bool</code></td>
+			  </tr>
+			  <tr>
+			    <td>Tipos binários:</td>
+			    <td><code>bytes</code>, <code>bytearray</code>,
+			    <code>exibição de memória</code></td>
+			  </tr>
+			</table>
 
-		<p>Você pode obter o tipo de dados de uma variável com a função <code class="w3-codespan">type()</code>.</p>
+			<h2>Obtendo o tipo de dados</h2>
 
-		<div class="exemplo-2">
-		<h3>Exemplo</h3>
-		<div class="d-code">
-		  x = 5<br>y = "João"<br>print(type(x))<br>print(type(y))</div>
-		</div>
+			<p>Você pode obter o tipo de dados de qualquer objeto usando a função <code>type()</code>:</p>
 
-		<div class="w3-note w3-panel">Você aprenderá mais sobre
-		  <a href="python_datatypes.asp">tipos de dados</a> e
-		  <a href="python_casting.asp">transmissão</a> posteriormente neste tutorial.</div>
+			<div class="exemplo-2">
+			<h3>Exemplo<br>Imprima o tipo de dados da variável x:</h3>
+			<div class="d-code">
+			x = 5<br>
+			imprima(tipo(x))
+			</div>
+			</div>
 
-		<h2>Aspas simples ou duplas?</h2>
+			<h2>Definindo o tipo de dados</h2>
 
-		<p>Variáveis de string podem ser declaradas usando aspas simples ou duplas:</p>
-
-		<div class="exemplo-2">
-		<h3>Exemplo</h3>
-		<div class="d-code">
-		x = "João"<br># é o mesmo que<br>x =
-		  'John'
-		</div>
-		</div>
-
-		<h2>Diferencia maiúsculas de minúsculas</h2>
-
-		<p>Os nomes de variáveis diferenciam maiúsculas de minúsculas.</p>
-
-		<div class="exemplo-2">
-		<h3>Exemplo<br>Isso criará duas variáveis:</h3>
-		<div class="d-code">
-		  a = 4<br>A =
-		  &quot;Sally&quot;<br># A não substituirá um</div>
-		</div>
+			<p>No Python, o tipo de dados é definido quando você atribui um valor a uma variável:</p>
+			<table>
+			<tr>
+			<th style="min-width:350px">Exemplo</th>
+			<th>Tipo de dados</th>
+			</tr>
+			<tr>
+			<td>x = "Olá, Mundo"</td>
+			<td>str</td>
+			</tr>
+			<tr>
+			<td>x = 20</td>
+			<td>int</td>
+			</tr>
+			<tr>
+			<td>x = 20,5</td>
+			<td>flutuar</td>
+			</tr>
+			<tr>
+			<td>x = 1j</td>
+			<td>complexo</td>
+			</tr>
+			<tr>
+			<td>x = [&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;]</td>
+			<td>lista</td>
+			</tr>
+			  <tr>
+			<td>x = (&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;)</td>
+			<td>tupla</td>
+			  </tr>
+			  <tr>
+			<td>x = intervalo(6)</td>
+			<td>intervalo</td>
+			  </tr>
+			  <tr>
+			<td>x = {&quot;nome&quot; : &quot;João&quot;, &quot;idade&quot; : 36}</td>
+			<td>dicionar</td>
+			  </tr>
+			  <tr>
+			<td>x = {&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;}</td>
+			<td>conjunto</td>
+			  </tr>
+			  <tr>
+			<td>x = frozenset({&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;})</td>
+			<td>congelado</td>
+			  </tr>
+			  <tr>
+			<td>x = Verdadeiro</td>
+			<td>bool</td>
+			  </tr>
+			  <tr>
+			<td>x = b&quot;Olá&quot;</td>
+			<td>bytes</td>
+			  </tr>
+			  <tr>
+			<td>x = bytearray(5)</td>
+			<td>bytearray</td>
+			  </tr>
+			<tr>
+			<td>x = memoryview(bytes(5))</td>
+			<td>exibição de memória</td>
+			</tr>
+			</table>
 		</section>
 	</main>
 </body>
