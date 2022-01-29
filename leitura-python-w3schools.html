@@ -23,28 +23,26 @@
 	    	width: 100%;
 	    	text-align: center;
 	    	border-collapse: collapse;
-	    	border-radius: 1px;
 	    }
 
 	    table, td {
 	    	border: 0.5px solid;
-	    	padding: 5px;
+	    	padding: 5px 0 5px;
 	    }
 
 	    th {
 	    	color: white;
-	    	text-shadow: 0.5px 0.5px black;
 	    }
 
 		tr:nth-child(even) {
-		    background: linear-gradient(#8c8c8c, black); 
+		    background: linear-gradient(#8c8c8c, #232526); 
 		    opacity: 0.8 black; 
 		    color:white; 
 		    text-shadow: 1px 1px black; 
 		}
 
 		tr:nth-child(odd) {
-		    background: linear-gradient(black, #8c8c8c); 
+		    background: linear-gradient(#232526, #8c8c8c); 
 		    opacity: 0.8 black; 
 		    color:white; 
 		    text-shadow: 1px 1px black;	
@@ -62,6 +60,18 @@
 		strong {
 			color: white;
 			font-family: 'Courier', monospace;
+		}
+
+		.d-indice {
+			margin-top: 50px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+
+		.a-indice {
+			color: yellow;
+			font-size: 14px;
+			text-shadow: none;
+			text-decoration: none;
 		}
 
 		div.exemplo {
@@ -131,13 +141,20 @@
 		}
 	</style>
 </head>
-
 <body>
 	<main>
+		<div id="00" class="d-indice">
+			<a href="#introducao">Introdução</a><br>
+			<a href="#sintaxe">Sintaxe de Python</a><br>
+			<a href="#comentarios">Comentários de Python</a><br>
+			<a href="#variaveis">Variáveis de Python</a><br>
+			<a href="#tipos-de-dados">Tipos de dados de Python</a><br>
+		</div>
+			
 		<div style="display: none;">
 		</div>
 		<section id="introducao" class="introducao-py">
-			<h1>Introdução ao Python</h1>
+			<h1>Introdução ao Python<a class="a-indice" href="#00"><sub>&nbsp;índice</sub></a></h1>
 			<h2>O que é Python?</h2>
 			<p>Python é uma linguagem de programação popular. Foi criado por <em>Guido van Rossum</em> e lançado em 1991.</p>
 
@@ -325,7 +342,7 @@
 		</section>
 
 		<section id="sintaxe" class="sintaxe-py">
-			<h2>Executar sintaxe do Python</h2>	
+			<h2>Executar sintaxe do Python<a class="a-indice" href="#00"><sub>&nbsp;índice</sub></a></h2>	
 			<p>Como aprendemos na página anterior, a sintaxe do Python pode ser executada escrevendo diretamente na linha de comando:</p>
 
 			<div class="exemplo">
@@ -423,7 +440,7 @@
 		</section>
 
 		<section id="comentarios" class="comentarios-py">
-			<h1>Python <span class="color_h1">Comments</span></h1>
+			<h1>Python <span class="color_h1">Comments</span><a class="a-indice" href="#00"><sub>&nbsp;índice</sub></a></h1>
 			<p>Os comentários podem ser usados para explicar o código Python.</p>
 			<p>Os comentários podem ser usados para tornar o código mais legível.</p>
 			<p>Os comentários podem ser usados para impedir a execução ao testar o código.</p>
@@ -484,7 +501,15 @@
 			<p>Desde que a string não seja atribuída a uma variável, o Python lerá o código, mas o ignorará e você fez um comentário de várias linhas.</p>
 		</section>
 
-		<section id="variaveis" class="variaveis-py">>type()</code>.</p>
+		<section id="variaveis" class="variaveis-py">
+			<h1>Variáveis Python<a class="a-indice" href="#00"><sub>&nbsp;índice</sub></a></h1>
+			<h2>Variáveis</h2>
+			<p>Variáveis são contêineres para armazenar valores de dados.</p>
+
+			<h2>Criando variáveis</h2>
+			<p>Python não tem comando para declarar uma variável.</p>
+
+			<p>Uma variável é criada no momento em que você atribui um valor a ela.</p>
 
 			<div class="exemplo-2">
 			<h3>Exemplo</h3>
@@ -520,27 +545,27 @@
 			</div>
 		</section>
 
-		<section>
-			<h1>Python <span class="color_h1">Tipos de dados</span></h1>
+		<section id="tipos-de-dados" class="tipos-de-dados-py">
+			<h1>Python <span class="color_h1">Tipos de dados</span><a class="a-indice" href="#00"><sub>&nbsp;índice</sub></a></h1>
 			<h2>Tipos de dados integrados</h2>
 			<p>Na programação, o tipo de dados é um conceito importante.</p>
 			<p>Variáveis podem armazenar dados de diferentes tipos, e diferentes tipos podem fazer
 			coisas diferentes.</p>
 			<p>O Python tem os seguintes tipos de dados integrados por padrão, nestas categorias:</p>
-			<table class="w3-table">
+			<table>
 			  <tr>
-			    <th style="width:160px;">Tipo de texto:</th>
+			    <th>Tipo de texto:</th>
 			    <th><code>str</code></th>
 			  </tr>
 			  <tr>
 			    <td>Tipos Numéricos:</td>
 			    <td><code>int</code>, <code>float</code>,
-			    <code>complexo</code></td>
+			    <code>complex</code></td>
 			  </tr>
 			  <tr>
 			    <td>Tipos de sequência:</td>
-			    <td><code>lista</code>, <code>tupla</code>,
-			    <code>intervalo</code></td>
+			    <td><code>list</code>, <code>tuple</code>,
+			    <code>range</code></td>
 			  </tr>
 			  <tr>
 			    <td>Tipo de mapeamento:</td>
@@ -548,7 +573,7 @@
 			  </tr>
 			  <tr>
 			    <td>Tipos de conjunto:</td>
-			    <td><code>conjunto</code>, <code>congelado</code></td>
+			    <td><code>set</code>, <code>frozenset</code></td>
 			  </tr>
 			  <tr>
 			    <td>Tipo booleano:</td>
@@ -557,7 +582,7 @@
 			  <tr>
 			    <td>Tipos binários:</td>
 			    <td><code>bytes</code>, <code>bytearray</code>,
-			    <code>exibição de memória</code></td>
+			    <code>memoryview</code></td>
 			  </tr>
 			</table>
 
@@ -569,7 +594,7 @@
 			<h3>Exemplo<br>Imprima o tipo de dados da variável x:</h3>
 			<div class="d-code">
 			x = 5<br>
-			imprima(tipo(x))
+			print(tipo(x))
 			</div>
 			</div>
 
@@ -578,7 +603,7 @@
 			<p>No Python, o tipo de dados é definido quando você atribui um valor a uma variável:</p>
 			<table>
 			<tr>
-			<th style="min-width:350px">Exemplo</th>
+			<th>Exemplo</th>
 			<th>Tipo de dados</th>
 			</tr>
 			<tr>
@@ -595,31 +620,31 @@
 			</tr>
 			<tr>
 			<td>x = 1j</td>
-			<td>complexo</td>
+			<td>complex</td>
 			</tr>
 			<tr>
 			<td>x = [&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;]</td>
-			<td>lista</td>
+			<td>list</td>
 			</tr>
 			  <tr>
 			<td>x = (&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;)</td>
-			<td>tupla</td>
+			<td>tuple</td>
 			  </tr>
 			  <tr>
-			<td>x = intervalo(6)</td>
-			<td>intervalo</td>
+			<td>x = range(6)</td>
+			<td>range</td>
 			  </tr>
 			  <tr>
 			<td>x = {&quot;nome&quot; : &quot;João&quot;, &quot;idade&quot; : 36}</td>
-			<td>dicionar</td>
+			<td>dict</td>
 			  </tr>
 			  <tr>
 			<td>x = {&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;}</td>
-			<td>conjunto</td>
+			<td>ser</td>
 			  </tr>
 			  <tr>
 			<td>x = frozenset({&quot;maçã&quot;, &quot;banana&quot;, &quot;cereja&quot;})</td>
-			<td>congelado</td>
+			<td>frozenset</td>
 			  </tr>
 			  <tr>
 			<td>x = Verdadeiro</td>
@@ -635,7 +660,7 @@
 			  </tr>
 			<tr>
 			<td>x = memoryview(bytes(5))</td>
-			<td>exibição de memória</td>
+			<td>memoryview</td>
 			</tr>
 			</table>
 		</section>
